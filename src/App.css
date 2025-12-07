@@ -1,0 +1,190 @@
+
+/* ================== IMAGENS ================== */
+img {
+  display: block;
+  transition: transform 0.3s ease;
+  transform-origin: center;
+}
+
+/* ================== CONTAINER ================== */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ================== SIDEBAR ================== */
+.sidebar {
+  width: 300px;
+  background-color: #121212;
+  padding: 10px;
+  padding-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nav-logo {
+  font-size: 24px;
+}
+
+.nav-library {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #b7b3b6;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nav-playlist,
+.nav-podcast {
+  background-color: #242424;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.nav-playlist button,
+.nav-podcast button {
+  background-color: #fff;
+  color: black;
+  border: none;
+  padding: 6px 10px;
+  margin-top: 16px;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 20px;
+}
+
+.nav-playlist p,
+.nav-podcast p {
+  font-size: 12px;
+}
+
+.nav-footer {
+  margin-top: auto;
+}
+
+.nav-footer a {
+  color: #a7a7a7;
+  text-decoration: none;
+  font-size: 12px;
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+
+.nav-lang-button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 8px 12px;
+  margin-top: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+/* ================== MAIN ================== */
+main {
+  padding: 24px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+/* ================== SEARCH BAR ================== */
+.search-bar {
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  background: #242424;
+  padding: 8px 16px;
+  border-radius: 20px;
+  width: 300px;
+}
+
+.search-bar input {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  margin-left: 10px;
+  outline: none;
+}
+
+/* ================== GRIDS ================== */
+.artist-grid,
+.albums-grid {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  overflow-y: hidden; /* evita scroll vertical */
+  padding: 40px 0;
+  cursor: pointer;
+}
+
+/* ================== CARDS ================== */
+.artistas,
+.albuns {
+  background-color: #181818;
+  width: 150px;          /* largura fixa */
+  height: 220px;         /* altura fixa */
+  border-radius: 12px;   /* borda levemente arredondada */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  overflow: hidden;
+  transform-origin: center;
+  transition: background-color 0.3s ease,
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+.artistas:hover,
+.albuns:hover {
+  background-color: #696868;
+  transform: scale(1.05);
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.35);
+}
+
+/* ================== IMAGENS NOS CARDS ================== */
+.artistas img,
+.albuns img {
+  height: 100px;
+  object-fit: cover;   /* mantém proporção sem distorção */
+  border-radius: 50%;  /* torna a imagem circular */
+  transition: transform 0.3s ease;
+  margin-bottom: 10px; /* espaço entre a imagem e o texto */
+}
+
+.artistas:hover img,
+.albuns:hover img {
+  transform: scale(1.05);
+}
+
+/* ================== TEXTO DO CARD ================== */
+.artistas h3,
+.albuns h3 {
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+  word-break: break-word;  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;  
+  -webkit-box-orient: vertical;
+}
+
+/* ================== OUTROS ================== */
+.content {
+  margin-top: 20px;
+}
+
+.content h2 {
+  margin-left: 40px;
+}
+
+i {
+  cursor: pointer;
+}
